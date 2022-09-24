@@ -31,8 +31,17 @@ A web application specialized in building custom villas, predicting the cost of 
 
 * user interface (client)
 * Contracting company interface
+![logo](https://github.com/abduallheid/Vitruvius-graduation-project-cs-2022/blob/abduallheid-patch-1/WhatsApp%20Image%202022-07-16%20at%203.07.27%20AM%20(5).jpeg)
+
+![Logo](https://github.com/abduallheid/Vitruvius-graduation-project-cs-2022/blob/abduallheid-patch-1/WhatsApp%20Image%202022-07-16%20at%203.03.32%20AM.jpeg)
+
+![Logo](https://github.com/abduallheid/Vitruvius-graduation-project-cs-2022/blob/abduallheid-patch-1/WhatsApp%20Image%202022-07-16%20at%203.07.23%20AM.jpeg)
+
+# This project under Development .... 
 
 
-
-
+## Authors
+- [@abduallheid](https://github.com/abduallheid)
+- [@mahmoudmagdy10](https://github.com/mahmoudmagdy10)
+- [@ahmed-elrooby](https://github.com/ahmed-elrooby)
 
