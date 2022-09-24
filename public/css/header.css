@@ -1,0 +1,341 @@
+:root {
+    --main-padding: 100px;
+    --main-color: rgb(0, 131, 143);
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+} */
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* medium screen  */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* large screen  */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* start header  */
+header {
+    width: 100%;
+    height: 100px;
+    padding: 10px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: .5s ease-in ease-in-out;
+}
+
+header .logo a img {
+    width: 100px;
+}
+
+header ul {
+    display: flex;
+    margin: 0;
+    background: #00000047;
+    padding: 7px 20px;
+    width: 29%;
+    border-radius: 20px;
+    position: fixed;
+    right: 20px;
+    top: 38px;
+}
+
+header ul li {
+    margin: 0px 15px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: var(--kv-ee-body-font-weight, normal);
+    font-style: var(--kv-ee-body-font-style, normal);
+}
+
+header ul li a.accept {
+    color: #c5850e !important;
+
+}
+
+header ul li a.accept::before {
+    width: 0 !important;
+    text-decoration: none;
+
+}
+
+header ul li a {
+    text-decoration: none !important;
+    display: block;
+    color: white;
+    font-size: 15px;
+    text-transform: capitalize;
+    white-space: nowrap;
+    transition: background-color 0.15s cubic-bezier(0.08, 0.91, 0.36, 0.98);
+    position: relative;
+    z-index: 1;
+    letter-spacing: 1px;
+    font-family: cursive !important;
+
+}
+
+header ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    z-index: -1;
+    top: 109%;
+    background-color: white;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+header ul li a:hover::before {
+    width: 100%;
+    color: #c9942d !important;
+    text-decoration: none;
+    font-weight: bold !important;
+}
+
+header.active {
+    background: #0e2a3c30;
+
+}
+
+header.active ul {
+    display: flex;
+    margin: 0;
+    background: var(--main-color);
+    padding: 7px 20px;
+    border-radius: 20px;
+}
+
+header.active ul li a.accept {
+    border-bottom: 2px solid white;
+    color: #c5850e !important;
+
+
+}
+
+header.active ul li a {
+    color: white !important;
+    position: relative;
+    font-family: 'Nunito Sans', sans-serif;
+
+}
+
+header.active ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    z-index: -1;
+    top: 109%;
+    background-color: #c9942d;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+
+}
+
+header.active ul li a:hover::before {
+    width: 100%;
+}
+
+header.active .bars i {
+    color: black;
+    border: none;
+    font-size: 30px;
+    text-decoration: none;
+
+}
+
+
+
+header .bars {
+    display: none;
+    background-color: var(--main-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+}
+
+header.active .bars {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+header .bars::before {
+    content: "";
+    position: absolute;
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+    right: 20px;
+    top: 48px;
+    transition: 0.5s ease-in-out;
+    display: none;
+
+
+
+}
+
+header.active .bars::before {
+    border-color: transparent transparent var(--main-color) transparent;
+}
+
+header .bars i {
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    margin: 12px;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+}
+
+header .bars.bear::before {
+    right: 60px;
+}
+
+header.active .bars i {
+    color: white;
+}
+
+@media (max-width: 991px) {
+    header .navigation {
+        position: absolute;
+        top: 95px;
+        right: -50%;
+        width: 50%;
+        height: 100vh;
+        background: #0000009e;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        transition: 0.5s ease-in-out;
+        border-radius: 0px !important;
+    }
+
+    header .navigation li {
+        margin-top: 24px;
+    }
+
+    header .navigation li a {
+        font-size: 25px;
+    }
+
+    header .bars {
+        display: block;
+    }
+}
+
+/* start media query for header  */
+@media screen and (max-width: 990px) {
+    header .logo {
+        margin-left: -40px;
+    }
+
+    header .bars i {
+        margin-right: -40px;
+    }
+}
+
+.logo a img:hover {
+
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    transition: 0.5s;
+
+
+}
+
+.logo a img:not(:hover) {
+
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    transition: 0.5s;
+}
+
+.alert {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    color: white !important;
+    text-align: center;
+    width: 65%;
+    margin: 2px auto;
+}
+
+.alert-success {
+
+    background-color: #169d65a3 !important;
+
+}
+
+small {
+    color: #e31025;
+    font-weight: 400;
+    margin: 2px auto;
+}
+
+.info_icons i {
+    height: 23px;
+    padding: 3px;
+}

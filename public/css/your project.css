@@ -1,0 +1,537 @@
+:root {
+    --main-padding: 100px;
+    --main-color: rgb(0, 131, 143);
+    background-color: #63aab3;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #63aab3
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* medium screen  */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* large screen  */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* start header  */
+header {
+    width: 100%;
+    padding: 10px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: .5s ease-in ease-in-out;
+}
+
+header ul {
+    display: flex;
+    margin: 0;
+    background: #00000047;
+    padding: 7px 20px;
+    border-radius: 20px;
+}
+
+header ul li {
+    margin: 0px 15px;
+    font-family: 'Nunito Sans', sans-serif;
+
+    list-style: none;
+}
+
+header ul li a.accept {
+    border-bottom: 2px solid white;
+    position: relative;
+}
+
+header ul li a.accept::before {
+    width: 0 !important;
+}
+
+header ul li a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    font-size: 15px;
+    text-transform: capitalize;
+    white-space: nowrap;
+    transition: background-color 0.15s cubic-bezier(0.08, 0.91, 0.36, 0.98);
+    position: relative;
+    z-index: 1;
+    letter-spacing: 1px;
+}
+
+header ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    z-index: -1;
+    top: 109%;
+    background-color: white;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+header ul li a:hover::before {
+    width: 100%;
+}
+
+header.active {
+    background: #0e2a3c30;
+    box-shadow: 1px 0px 0px white;
+}
+
+header.active .logo a span {
+    color: hsl(0deg 0% 13%) !important;
+}
+
+header.active ul {
+    display: flex;
+    margin: 0;
+    background: var(--main-color);
+    padding: 7px 20px;
+    border-radius: 20px;
+}
+
+header.active ul li a.accept {
+    border-bottom: 2px solid white;
+}
+
+header.active ul li a {
+    color: white !important;
+    position: relative;
+    font-family: 'Nunito Sans', sans-serif;
+    text-decoration: none;
+}
+
+header.active ul li a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    z-index: -1;
+    top: 109%;
+    background-color: white;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+header.active ul li a:hover::before {
+    width: 100%;
+}
+
+header.active .bars i {
+    color: black;
+    border: none;
+    font-size: 30px;
+}
+
+header .logo {
+    width: 142px;
+}
+
+header .logo a span {
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #eee;
+}
+
+header .bars {
+    display: none;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+}
+
+header.active .bars {
+    background-color: var(--main-color);
+}
+
+header .bars::before {
+    content: "";
+    position: absolute;
+    border-width: 15px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+    right: 20px;
+    top: 48px;
+    transition: 0.5s ease-in-out;
+    display: none;
+
+
+
+}
+
+header.active .bars::before {
+    border-color: transparent transparent var(--main-color) transparent;
+}
+
+header .bars i {
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    margin: 12px;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+}
+
+header .bars.bear::before {
+    right: 60px;
+}
+
+header.active .bars i {
+    color: white;
+}
+
+@media (max-width: 991px) {
+    header .navigation {
+        position: absolute;
+        top: 75px;
+        right: -50%;
+        width: 50%;
+        height: 100vh;
+        background: #0000009e;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        transition: 0.5s ease-in-out;
+        border-radius: 0px !important;
+    }
+
+    header .navigation li {
+        margin-top: 24px;
+    }
+
+    header .navigation li a {
+        font-size: 25px;
+    }
+
+    header .bars {
+        display: block;
+    }
+}
+
+/* start media query for header  */
+@media screen and (max-width: 990px) {
+    header .logo {
+        margin-left: -40px;
+    }
+
+    header .bars i {
+        margin-right: -40px;
+    }
+}
+
+/* end media query for header  */
+/* end header  */
+/* start title  */
+.title {
+    background-color: #63aab3;
+    padding-bottom: 40px;
+}
+
+.title .container .info {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    margin-left: 150px;
+}
+
+.title .container .info h3 {
+    letter-spacing: 1.3px;
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 36px;
+    color: white;
+    font-family: "Libre Baskerville", serif;
+
+}
+
+.title .projects {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    padding: 40px 0;
+
+}
+
+.title .projects .card {
+    position: relative;
+    width: 320px;
+    height: 420px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+        inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+        5px 5px 5px rgba(0, 0, 0, 0.05),
+        -5px -5px 5px rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    margin: 30px;
+    width: 32%;
+}
+
+.title .projects .card .box {
+    position: absolute;
+    top: 20px;
+    Left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background-color: #ebf5fc;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.title .projects .card:hover .box {
+    transform: translateY(-50px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    background-color: #0095A8;
+    color: white;
+
+
+}
+
+.title .projects .card .box .det {
+    padding: 20px;
+    text-align: center;
+}
+
+.card .box .det ul li {
+    list-style: none;
+    transition: 0.5s;
+    z-index: 1;
+    font-family: "Libre Baskerville", serif;
+
+}
+
+.card .box .det h3 {
+    transition: 0.5s;
+    z-index: 1;
+    pointer-events: none;
+    font-weight: bold;
+
+    font-family: "Libre Baskerville", serif;
+}
+
+.card .box:hover .det h3,
+.card .box:hover .det li {
+    color: #fff;
+
+}
+
+.card .box .det .accept {
+    color: white !important;
+}
+
+.card .box .det .unaccept {
+    top: -7px;
+    padding: 8px;
+    color: white !important;
+}
+
+.card .box .det .pay {
+    color: white !important;
+}
+
+
+.card .box .det a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: #ebf5fc;
+    margin-top: 15px;
+    border-radius: 11px;
+    color: #898989;
+    text-decoration: none;
+    font-weight: 400;
+    /* box-shadow: 0 10px 20px rgb(0 0 0 / 20%); */
+    transition: 0.5s;
+    text-align: center;
+}
+
+.card .box .det a:hover {
+    /* background: #212121; */
+    transition: all ease-in-out 0.4s;
+
+
+}
+
+.card .box .det .card_buttons {
+    display: flex;
+    gap: 7px;
+    margin-left: 45px;
+
+}
+
+.card .box .det .delete {
+    background-color: Red;
+    font-weight: bold;
+    color: white;
+    margin-top: 15px;
+    padding: 11px;
+    font-size: 20px;
+}
+
+.card .box .det a:hover {
+    background: #0095a8;
+}
+
+.card .box .det .pay:hover {
+    background-color: rgb(34, 189, 23) !important;
+    color: #212529 !important;
+}
+
+.title .container .box .det img {
+    max-width: 100%;
+    width: 290px;
+    height: 200px;
+
+}
+
+.title .container input[type="submit"] {
+    transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    margin-left: 12px;
+    padding: 5px 10px;
+    font-size: 16px;
+    text-transform: capitalize;
+    border-radius: 5px;
+    border: 1px solid;
+    font-family: "Libre Baskerville", serif;
+    cursor: pointer;
+
+}
+
+
+.title .container input[type="submit"]:hover {
+    background-color: rgb(18 200 216 / 54%);
+    color: white;
+    border: 1px solid white;
+}
+
+
+/* end title  */
+.swiper .swiper-button-next {
+    font-size: 30px;
+    transition: all 0.4s ease-in-out;
+    margin-left: 30px;
+
+}
+
+.swiper .swiper-button-next:hover {
+    color: black;
+
+}
+
+.swiper .swiper-button-prev {
+    font-size: 30px;
+    transition: all 0.4s ease-in-out;
+    margin-left: 30px;
+
+}
+
+.swiper .swiper-button-prev:hover {
+    color: black;
+
+}
+
+.project_star {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: x-large;
+    cursor: pointer;
+
+}
+
+.btn-warning {
+    background-color: orangered !important;
+}
+
+.btn-success {
+    background-color: rgb(20, 129, 20) !important;
+}
+
+.btn-success:hover {
+    background-color: rgb(26, 197, 26) !important;
+}
+
+.btn-danger {
+    background-color: rgb(182, 72, 72) !important;
+}
+
+.btn-danger:hover {
+    background-color: rgb(194, 28, 28) !important;
+}
+
+.btn:hover {
+    color: rgb(48, 48, 48) !important;
+    font-weight: bold !important;
+}
+
+.btn-danger:hover {
+    color: rgb(255, 255, 255) !important;
+}

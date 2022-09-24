@@ -1,0 +1,355 @@
+:root {
+  --main-padding: 100px;
+  --main-color: rgb(0, 131, 143);
+  --kv-ee-heading-font-family: Libre Baskerville;
+  --kv-ee-heading-font-weight: 700;
+  --kv-ee-heading-font-style: normal;
+  --kv-ee-body-font-family: Nunito;
+  --kv-ee-body-font-weight: 300;
+  --kv-ee-body-font-style: normal;
+  --kv-ee-font-size-factor: 1;
+  --kv-ee-font-size: 100%;
+  --kv-ee-global-font-size-factor: var(--kv-ee-font-size-factor, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* medium screen  */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* large screen  */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* start restaurant  */
+.restaurant {
+  padding-top: 150px;
+  padding-bottom: 100px;
+  position: relative;
+  background-color: #EEE3E3;
+
+
+}
+
+.restaurant::before {
+  content: "";
+  position: absolute;
+  left: -102px;
+  bottom: -4px;
+  width: calc(100% + 102px);
+  height: 5px;
+  background: var(--main-color);
+  display: none;
+  z-index: 1;
+}
+
+.restaurant .container .box {
+  display: flex;
+  gap: 127px;
+  margin-left: 48px;
+  font-family: var(--kv-ee-body-font-family, "Nunito Sans", "Open Sans", sans-serif);
+}
+
+
+
+
+.restaurant .container .box img {
+  margin-left: 100px;
+  max-width: 100%;
+  width: 300px;
+}
+
+.restaurant .container .box .details {
+  margin-left: -87px;
+}
+
+.restaurant .container .box .details h2 {
+  color: var(--main-color);
+  text-transform: capitalize;
+  font-size: 40px;
+  padding-top: 10px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+  font-family: 'Libre Baskerville', serif;
+
+
+}
+
+.restaurant .container .box .details ul li {
+  font-size: 20px;
+  font-family: 'Nunito Sans', sans-serif;
+
+
+}
+
+.restaurant .container .box .details div {
+  display: flex;
+
+}
+
+.restaurant .container .box .details div p {
+  text-transform: capitalize;
+  font-size: 18px;
+  font-family: 'Nunito Sans', sans-serif;
+
+
+}
+
+.restaurant .container .box .details .link a {
+  background-color: rgb(8 183 199 / 17%);
+  position: relative;
+  width: fit-content;
+  border: 1px solid #ddd;
+  padding: 10px 5px;
+  display: block;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.6s ease;
+  box-shadow: 0px 2px 15px -2px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  border-radius: 5px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.restaurant .container .box .details .link a:hover {
+  color: white;
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.restaurant .container .box .details .link a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: var(--main-color);
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.6s ease;
+}
+
+.restaurant .container .box .details .link a:hover::before {
+  width: 100%;
+}
+
+
+
+
+/* end restaurant  */
+/* start contract  */
+.maincontract {
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background-image: url('../../image-home/rest.jpeg');
+  background-size: cover;
+  margin-bottom: 50px;
+  position: relative;
+
+
+}
+
+.maincontract::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: -102px;
+  width: calc(100% + 102px);
+  height: 5px;
+  background: var(--main-color);
+  display: none;
+}
+
+.maincontract .container {
+  background-color: white;
+  padding: 20px;
+  margin-top: 66px;
+
+
+}
+
+.maincontract .container .cont-det h2 {
+  font-size: 38px;
+  letter-spacing: 1.9px;
+  color: var(--main-color);
+  text-transform: capitalize;
+  margin-bottom: 21px;
+  padding-top: 20px;
+  padding-left: 30px;
+  font-weight: normal;
+  font-family: 'Libre Baskerville', serif;
+
+
+}
+
+.maincontract .container .con-sign {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-family: 'Nunito Sans', sans-serif;
+
+
+  gap: 300px;
+}
+
+.maincontract .container .con-sign p {
+  padding-left: 30px;
+  text-transform: capitalize;
+  font-size: 20px;
+
+}
+
+.maincontract .container .con-sign a {
+  width: fit-content;
+  background-color: rgb(0 131 143 / 28%);
+  padding: 5px 30px;
+  border-radius: 5px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  z-index: 1;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Libre Baskerville', serif;
+
+}
+
+.maincontract .container .con-sign a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.maincontract .container .con-sign a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  background-color: var(--main-color);
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.maincontract .container .con-sign a:hover::before {
+  height: 100%;
+}
+
+/* end contractor  */
+/* start payement  */
+.payement {
+  padding-bottom: 100px;
+  font-family: 'Nunito Sans', sans-serif;
+
+}
+
+.payement .pay {
+  display: flex;
+  justify-content: space-around;
+  font-family: 'Nunito Sans', sans-serif;
+
+}
+
+.payement .container .pay h3 {
+  padding-left: 20px;
+  font-size: 30px;
+  color: var(--main-color);
+  text-transform: capitalize;
+  font-weight: bold;
+  letter-spacing: 0.9px;
+  font-family: 'Libre Baskerville', serif;
+
+}
+
+.payement .container .pay a {
+  width: fit-content;
+  background-color: rgb(0 131 143 / 28%);
+  padding: 10px 20px;
+  border-radius: 10px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  z-index: 1;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 0.8s ease;
+  font-family: 'Nunito Sans', sans-serif;
+
+}
+
+.payement .container .pay a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.payement .container .pay a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  background-color: var(--main-color);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+
+.payement .container .pay a:hover::before {
+  height: 380%;
+}
+
+/* end contract  */

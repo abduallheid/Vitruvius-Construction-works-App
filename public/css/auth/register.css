@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* background-color: black; */
+    background-image: url(./images/street.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-position: center;
+    height: 100vh;
+    color: #000;
+}
+
+.container {
+
+    width: 330px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.sign-up-form {
+
+    box-shadow: 0 0 17px rgb(0, 0, 0);
+    padding: 20px;
+    margin: 30% 0;
+    text-align: center;
+}
+
+.sign-up-form h1 {
+    color: white;
+    margin-bottom: 30px;
+    font-size: 26px;
+}
+
+.input-box {
+    border-radius: 15px;
+    padding: 8px;
+    margin: 10px -6px;
+    width: 100%;
+    border: 1px solid white;
+    outline: none;
+    background-color: white;
+}
+
+.sign-up-button {
+    border-radius: 30px;
+    font-size: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    width: 50%;
+    border: none;
+    outline: none;
+    background-color: rgb(233, 71, 42);
+    color: #fff;
+}
+
+p {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+
+    font-size: 18px;
+}
+
+.Sign-in {
+    font-size: 24px;
+    font-weight: bold;
+    color: aqua;
+}
+
+label {
+
+    color: brown;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: bold;
+}
+
+.contain {
+    display: block;
+}

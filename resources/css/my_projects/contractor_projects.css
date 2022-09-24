@@ -1,0 +1,381 @@
+:root {
+  --main-padding: 100px;
+  --main-color: rgb(0, 131, 143);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* medium screen  */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* large screen  */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+.contract {
+  background-image: url('../../image-home/home.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 136vh;
+  margin: 0px;
+  position: relative;
+  margin-bottom: 47px;
+  padding-bottom: 10px;
+}
+
+.contract .container {
+  position: absolute;
+  top: 26%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  padding-top: -47px;
+  padding-left: 31px;
+  background-color: white;
+  flex-wrap: wrap;
+  padding-bottom: 15px;
+  margin-top: 80px;
+  padding-top: 10px;
+}
+
+.contract .container .info h3 {
+  padding: 15px 0;
+  display: flex;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 25px;
+  position: relative;
+  font-family: 'Libre Baskerville', serif;
+
+}
+
+.contract .container .info h3::after {
+  content: "";
+  position: absolute;
+  background-color: var(--main-color);
+  width: 50px;
+  height: 3px;
+  top: 4px;
+}
+
+.contract .container .de {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.contract .container .de p {
+  padding: 0px 0;
+  line-height: 1.5;
+  font-family: 'Nunito Sans', sans-serif;
+
+}
+
+.contract .container .de a {
+  margin-top: 40px;
+  position: relative;
+  overflow: hidden;
+  background: var(--main-color);
+  padding: 8px 13px;
+  border-radius: 10px;
+  color: white;
+  text-transform: capitalize;
+  text-decoration: none;
+  box-shadow: 0px 2px 15px #000;
+  font-family: 'Nunito Sans', sans-serif;
+
+}
+
+.contract .container .info a:hover {
+  box-shadow: none;
+  text-decoration: none;
+}
+
+.contract .container .de a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: wheat;
+  top: 0;
+  left: -100%;
+  background: -webkit-linear-gradient(180deg, transparent, #ddd, transparent);
+  transition: all 0.5s ease-in-out;
+}
+
+.contract .container .de a:hover::before {
+  left: 100%;
+}
+
+/* start media  */
+@media screen and (max-width: 400px) {
+  .contract .container {
+    width: 351px;
+  }
+
+}
+
+/* end media  */
+/* end contract */
+/* start grid  */
+.grid {
+  margin-top: -50px;
+
+  padding-bottom: 50px;
+  background-color: var(--main-color);
+}
+
+.grid h3 {
+  display: flex;
+  margin: 30px 50px;
+  padding-top: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 0.8px;
+  color: white;
+}
+
+.grid .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin-left: 45px;
+}
+
+.grid .container .box {
+  text-align: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  background-color: white;
+  transition: 0.3s;
+}
+
+.grid .container .box img {
+  max-width: 100%;
+}
+
+
+
+
+.grid .container .box ul li h2 {
+  display: flex;
+  margin: 5px 11px;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: 'Libre Baskerville', serif;
+
+}
+
+.grid .container .box .price {
+  display: flex;
+}
+
+.grid .container .box .price p {
+  padding-left: 10px;
+  font-family: 'Nunito Sans', sans-serif;
+
+}
+
+.grid .container .box .date p {
+  padding-left: 10px;
+  font-family: 'Nunito Sans', sans-serif;
+
+}
+
+.grid .container .box .date {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.grid input[type="submit"] {
+  margin-top: 47px;
+  margin-left: 49px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  transition: 0.3s;
+  font-family: 'Libre Baskerville', serif;
+
+  text-transform: capitalize;
+  background: white;
+  color: black;
+}
+
+.grid input[type="submit"]:hover {
+  background-color: rgb(255 152 0);
+  color: white;
+
+}
+
+/* start media  */
+@media screen and (max-width: 400px) {
+  .grid .container {
+    margin-left: -3px;
+
+
+  }
+
+}
+
+@media screen and (min-width: 410px) and (max-width:600px) {
+  .grid .container {
+    margin-left: -1px;
+
+
+
+  }
+
+}
+
+/* end media  */
+
+/* end grid  */
+/* start null  */
+.null {
+  background-image: url(../image/hi.jpeg);
+  width: 100%;
+  height: 88px;
+  background-size: cover;
+  background-position: 100%;
+}
+
+/* end null  */
+/* start notification */
+.notification {
+  padding-bottom: 50px;
+}
+
+.notification .container .box-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 26px;
+  flex-wrap: wrap;
+}
+
+.notification .container h1 {
+  color: var(--main-color);
+  margin-left: 10px;
+  text-transform: capitalize;
+  letter-spacing: 0.7px;
+  font-size: 40px;
+  font-family: 'Libre Baskerville', serif;
+  padding-top: 25px;
+
+}
+
+@media (max-width: 700px) {
+  .notification .container .box-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 26px;
+    flex-wrap: wrap;
+  }
+}
+
+.notification .container .box {
+  display: flex;
+  flex-direction: column;
+}
+
+.notification .container .box .icon {
+  display: flex;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  width: 360px;
+}
+
+.notification .container .box .icon i {
+  font-size: 35px;
+  color: var(--main-color);
+  padding-right: 18px;
+  position: relative;
+  margin-top: 13px;
+}
+
+.notification .container .box .icon p {
+  line-height: 1.8;
+  font-family: 'Nunito Sans', sans-serif;
+
+}
+
+.notification .container .box .icon i::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 50px;
+  background-color: black;
+  left: 40px;
+  top: -8px;
+}
+
+.notification .container .box .details {
+  padding-left: 5px;
+  display: flex;
+  font-family: 'Nunito Sans', sans-serif;
+
+}
+
+.notification .container .box .details p {
+  padding-top: 17px;
+  padding-left: 20px;
+  line-height: 1.8;
+  font-family: 'Nunito Sans', sans-serif;
+
+}
+
+.notification .container .box a img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* end notification */

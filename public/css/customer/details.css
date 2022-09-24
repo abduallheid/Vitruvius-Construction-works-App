@@ -1,0 +1,647 @@
+:root {
+    --main-padding: 100px;
+    --main-color: #3fa2ab;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol", "Noto Color Emoji";
+    background-color: #3fa2ab !important;
+}
+
+/* ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+} */
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* medium screen  */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* large screen  */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.title {
+    background-color: #3fa2ab;
+    padding-bottom: 20px;
+    padding-top: 50px;
+}
+
+.title .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.title .projects {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    padding: 40px 0;
+
+}
+
+.title .projects .card {
+    position: relative;
+    width: 320px;
+    height: 420px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+        inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+        5px 5px 5px rgba(0, 0, 0, 0.05),
+        -5px -5px 5px rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    margin: 30px;
+    width: 360px;
+
+}
+
+.title .projects .card .box {
+    position: absolute;
+    top: 20px;
+    Left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background-color: #ebf5fc;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.title .projects .card:hover .box {
+    transform: translateY(-50px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    background-color: #0095A8;
+    color: white;
+
+
+}
+
+.title .projects .card .box .det {
+    padding: 20px;
+    text-align: center;
+}
+
+.card .box .det ul li {
+    list-style: none;
+    transition: 0.5s;
+    z-index: 1;
+    font-family: "Libre Baskerville", serif;
+
+}
+
+.card .box .det h3 {
+    transition: 0.5s;
+    z-index: 1;
+    pointer-events: none;
+    font-weight: bold;
+
+    font-family: "Libre Baskerville", serif;
+}
+
+.card .box:hover .det h3,
+.card .box:hover .det li {
+    color: #fff;
+
+}
+
+
+
+.card .box .det a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: #0095A8;
+    margin-top: 15px;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+
+.card .box .det a:hover {
+    background: #212121;
+    transition: all ease-in-out 0.4s;
+
+
+}
+
+.card .box .det a:hover {
+    background: #434343
+}
+
+.title .container .box .det img {
+    max-width: 100%;
+    width: 290px;
+    height: 200px;
+
+}
+
+.title .container input[type="submit"] {
+    transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    margin-left: 12px;
+    padding: 5px 10px;
+    font-size: 16px;
+    text-transform: capitalize;
+    border-radius: 5px;
+    border: 1px solid;
+    font-family: "Libre Baskerville", serif;
+    cursor: pointer;
+
+}
+
+.title .container input[type="submit"]:hover {
+    background-color: rgb(18 200 216 / 54%);
+    color: white;
+    border: 1px solid white;
+}
+
+
+/* end title  */
+.swiper .swiper-button-next {
+    font-size: 30px;
+    transition: all 0.4s ease-in-out;
+    margin-left: 30px;
+
+}
+
+.swiper .swiper-button-next:hover {
+    color: black;
+
+}
+
+.swiper .swiper-button-prev {
+    font-size: 30px;
+    transition: all 0.4s ease-in-out;
+    margin-left: 30px;
+
+}
+
+.swiper .swiper-button-prev:hover {
+    color: black;
+
+}
+
+/* start table  */
+.table {
+    justify-content: flex-end;
+    display: flex;
+}
+
+.table table {
+    width: 46%;
+    background: #fafafa;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    box-shadow: 0 2px 12px rgba(32, 32, 32, 0.3);
+    margin-top: 100px;
+}
+
+.continue {
+    margin-left: 20px;
+}
+
+.table table th,
+td {
+    padding: 10px 15px;
+
+}
+
+.table table td {
+    border: 1px solid lightgray;
+
+}
+
+.table table th {
+    background: #0095A8;
+    color: white;
+    text-transform: capitalize;
+    font-family: "Libre Baskerville", serif;
+    border-top: none;
+
+}
+
+.table table tr {
+    transition: all 0.4s ease-in-out;
+    text-transform: capitalize;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.table table tr:hover {
+    background-color: #eeeeee;
+    box-shadow: 0 2px 12px rgba(32, 32, 32, 0.3);
+
+
+}
+
+/* end table  */
+
+/* end restaurant  */
+/* start contract  */
+.maincontract {
+    margin-top: 20px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    background-image: url('../../image-home/m (4).jpeg');
+    background-size: cover;
+    position: relative;
+    display: none;
+
+
+}
+
+.maincontract::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: -102px;
+    width: calc(100% + 102px);
+    height: 5px;
+    background: var(--main-color);
+    display: none;
+}
+
+.maincontract .container {
+    background-color: white;
+    padding: 20px;
+    margin-top: 66px;
+
+
+}
+
+.maincontract .container .cont-det h2 {
+    font-size: 38px;
+    letter-spacing: 1.9px;
+    color: var(--main-color);
+    text-transform: capitalize;
+    margin-bottom: 21px;
+    padding-top: 20px;
+    padding-left: 30px;
+    font-weight: normal;
+    font-family: 'Libre Baskerville', serif;
+
+
+}
+
+.maincontract .container .con-sign {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-family: 'Nunito Sans', sans-serif;
+    gap: 300px;
+}
+
+.maincontract .container .con-sign p {
+    padding-left: 30px;
+    text-transform: capitalize;
+    font-size: 20px;
+
+}
+
+.maincontract .container .con-sign a {
+    width: fit-content;
+    background-color: rgb(0 131 143 / 28%);
+    padding: 5px 30px;
+    border-radius: 5px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    z-index: 1;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Libre Baskerville', serif;
+
+}
+
+.maincontract .container .con-sign a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.maincontract .container .con-sign a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background-color: var(--main-color);
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.maincontract .container .con-sign a:hover::before {
+    height: 100%;
+}
+
+.show_contract {
+    display: block !important;
+}
+
+/* end contractor  */
+/* start payement  */
+.payement {
+    padding-bottom: 100px;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: #F2EAEA;
+    padding-top: 50px;
+    display: none;
+
+}
+
+.payement .pay {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Nunito Sans', sans-serif;
+
+}
+
+.payement .container .pay h3 {
+    padding-left: 20px;
+    font-size: 30px;
+    color: var(--main-color);
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: 0.9px;
+    font-family: 'Libre Baskerville', serif;
+
+}
+
+.payement .container .pay a {
+    width: fit-content;
+    background-color: rgb(0 131 143 / 28%);
+    padding: 10px 20px;
+    border-radius: 10px;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    z-index: 1;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.8s ease;
+    font-family: 'Nunito Sans', sans-serif;
+
+}
+
+.payement .container .pay a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.payement .container .pay a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background-color: var(--main-color);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    z-index: -1;
+    transition: all 0.6s ease;
+}
+
+.payement .container .pay a:hover::before {
+    height: 380%;
+}
+
+/* end contract  */
+
+.icon_star {
+    font-weight: 900;
+    margin-left: 15px;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+.active_icon {
+    font-weight: 900;
+    margin-left: 15px;
+    font-size: x-large;
+    color: #ffc107;
+
+}
+
+hr {
+    margin-bottom: 0 !important;
+    margin-top: 3px !important;
+    margin-left: 21px !important;
+    border: 1px solid #04bf572b !important;
+}
+
+
+.slide_show img {
+    width: 92% !important;
+    height: 520px !important;
+    margin: 1px auto !important;
+    /* margin-top: 200px !important; */
+    /* padding: 30px; */
+    border-radius: 60px;
+    box-shadow: 1px 1px 16px 4px #0b3c62d1;
+}
+
+
+.time {
+
+    position: absolute;
+    right: 65px;
+    font-weight: bold;
+    font-family: cursive;
+    color: #3d3f3f;
+}
+
+.name_comment {
+    font-weight: bold;
+    font-family: cursive;
+    color: #bf5a5a;
+
+}
+
+.name_reply {
+    font-weight: bold;
+    font-family: cursive;
+    color: #1f1a54;
+
+}
+
+
+.add,
+.add .send {
+    font-weight: bold;
+    font-family: cursive;
+    color: #0d7938;
+}
+
+.h_3 {
+    font-weight: bold;
+    font-family: cursive;
+    color: #8a0a0a !important;
+}
+
+.h3_reply {
+    font-weight: bold;
+    font-family: cursive;
+    color: #271d76 !important;
+}
+
+.add {
+    margin-top: 20px;
+    margin-bottom: 55px !important;
+    width: 95% !important;
+    display: block;
+    margin-left: 20px;
+}
+
+.submit {
+    float: right;
+    margin-top: 5px;
+}
+
+
+.comment-system {
+    text-transform: capitalize;
+    border: 2px solid #c9c9c9;
+    margin: 100px auto;
+    width: 77%;
+    padding: 20px;
+    font-weight: bold;
+    font-family: cursive;
+    box-shadow: 1px 1px 20px 1px #000000c4;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+}
+
+.comment-system img {
+    width: 40px;
+    border-radius: 50%;
+    background-color: brown;
+}
+
+.comment-system h3 {
+    text-align: center;
+    font-weight: bolder;
+    font-size: -webkit-xxx-large;
+}
+
+.comment-system .time {
+    float: right;
+    color: #010d4e;
+}
+
+.comment .content,
+.reply .content {
+    margin-left: 30px;
+    padding: 12px;
+    border-radius: 11px;
+}
+
+.comment .content {
+    box-shadow: 1px 1px 6px 1px #636363;
+    background-color: #4f9cd9c7;
+
+}
+
+.reply .content {
+    box-shadow: 1px 1px 6px 1px #a1a1a1;
+    background-color: #0a7e5e9e;
+    margin-bottom: 20px;
+
+
+}
+
+.reply {
+    margin-top: 20px;
+    margin-left: 30px;
+
+}
+
+
+.reply_field {
+    border-radius: 15px !important;
+    background-color: #f3f3f3 !important;
+    box-shadow: 1px 1px 6px 2px #cbc2c2;
+}
+
+.projects .verified {
+    display: flex;
+    gap: 10px;
+    background-color: #65a927;
+    padding: 13px;
+    margin-left: 30px;
+    width: 70%;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 1px 1px 11px 2px #83d2f5;
+    height: 48px;
+}
+
+.projects .unverified {
+    display: flex;
+    gap: 10px;
+    background-color: #a62110;
+    padding: 13px;
+    margin-left: 30px;
+    width: 70%;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 1px 1px 11px 2px #83d2f5;
+    color: white;
+    height: 48px;
+}
