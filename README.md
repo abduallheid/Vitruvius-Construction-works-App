@@ -1,7 +1,7 @@
 # Vitruvius 
-## Construction Works App
+## Construction Works App Using Machine Learning 
 
-A web application specialized in building custom villas, predicting the cost of construction and choosing between unique global designs
+A web application specialized in building custom villas, predicting the cost of construction and choosing between unique global designs using AI 
 
 
 <o align="center">
